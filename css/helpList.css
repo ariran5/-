@@ -1,0 +1,17 @@
+html,body {
+    width:100%;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+.clearFix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+a {
+    color:#1891F5;
+    text-decoration: none;
+    cursor:pointer;
+}
