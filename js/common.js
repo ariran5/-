@@ -132,7 +132,7 @@ class jobWithSvg {
 		var screenEnd = scrollValue + this.screenSize.windowHeight;
 		for (var i = 0; i < this.allAnimSVGNames.length; i++) {
 			var a = this.allAnimSVG[this.allAnimSVGNames[i]].coordinatesInDocument;
-			if (a > screenTop && a < screenEnd) 
+			if (a > screenTop && a < screenEnd)
 				this.__calculate(scrollValue,this.allAnimSVGNames[i]);
 		}
 	}
@@ -156,12 +156,17 @@ class jobWithSvg {
 		}
 	}
 }
-var initSVG = new jobWithSvg();
-
-window.onscroll = function() {
+var initSVG;
+setTimeout(function() {
+	var initSVG = new jobWithSvg();
+	window.onscroll = function() {
 	var scrollValue = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
 	initSVG.howSvgActive(scrollValue);
 }
+},10);
+
+
+
 
 
 /*
