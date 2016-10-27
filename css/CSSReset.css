@@ -5,4 +5,20 @@ ol, ul{list-style:none;}
 blockquote, q{quotes:none;}
 blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;}
 table{border-collapse:collapse;border-spacing:0;}
-��������:http://www.itmathrepetitor.ru/html-i-css-sbros-stilejj-reset-css/#eri
+html,body {
+    width:100%;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+.clearFix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+a {
+    color:#1891F5;
+    text-decoration: none;
+    cursor:pointer;
+}

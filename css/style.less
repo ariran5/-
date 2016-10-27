@@ -1,47 +1,17 @@
-@font-face {
-	font-family: 'NBl';
-	src: url('../fonts/HelveticaNeueCyr-Black.otf');
-}
+
 @font-face {
 	font-family: 'NBo';
 	src: url('../fonts/HelveticaNeueCyr-Bold.otf');
 }
 
 @font-face {
-	font-family: 'NMe';
-	src: url('../fonts/HelveticaNeueCyr-Medium.otf');
-}
-
-@font-face {
-	font-family: 'NRo';
-	src: url('../fonts/HelveticaNeueCyr-Roman.otf');
-}
-
-@font-face {
-	font-family: 'NTh';
-	src: url('../fonts/HelveticaNeueCyr-Thin.otf');
-}
-
-@font-face {
 	font-family: 'NLi';
 	src: url('../fonts/HelveticaNeueCyr-Light.otf');
 }
-
 @font-face {
 	font-family: 'NLiI';
 	src: url('../fonts/HelveticaNeueCyr-Lightitalic.otf');
 }
-
-@font-face {
-	font-family: 'NUL';
-	src: url('../fonts/HelveticaNeueCyr-UltraLight.otf');
-}
-
-@font-face {
-	font-family: 'GPB';
-	src: url('../fonts/GothamProBold.ttf');
-}
-
 @font-face {
 	font-family: 'GPL';
 	src: url('../fonts/GothamProLight.ttf');
@@ -56,7 +26,12 @@
 	font-family: 'socicon';
 	src: url('../fonts/socicon/socicon.ttf');
 }
-
+@font-face {
+    font-family: 'MuseoCyrl';
+    src: url('../fonts/MuseoCyrl.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*@font-face{font-family:'Museo';
 src:
@@ -106,7 +81,13 @@ body {
 .wbb {
 	border-bottom: 1px dotted #111;
 }
-
+.verticalAlignMethod {
+	display: inline-block;
+	height: 100%;
+	max-height: 70vh;
+	width:0;
+	vertical-align: middle;
+}
 
 
 .topSiteContainer {
@@ -284,18 +265,187 @@ body {
 		letter-spacing: .6;
 	}
 }
+#tree,#pay{
+	max-height: 70vh;
+	display: inline-block;
+	vertical-align: middle;
+}
 
-.portfolio {
-	padding-bottom: 1000px;
+#pay {
+	padding: 0 40px;
 }
-#svg_0 {
-}
-#svg_1 {
+.shortInfo {
+	padding: 15vh 0;
+	.shortInfo_container {
 
-	fill:transparent;
+		.shortInfo_container-SVGImage {
+			width:50%;
+			min-width: 320px;
+			min-width: 480px;
+			float: left;
+			max-height: 70vh;
+		}
+		.shortInfo_container-title {
+			width:50%;
+			color: @font_color;
+			float: left;
+			font-family: 'MuseoCyrl';
+
+			.shortInfo_container-title_container {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 20px;
+
+				h3 {
+					font-size: 3.2em;
+					color: #80694d;
+				}
+				h4 {
+					font-size: 1.4em;
+					text-indent: 30px;
+					color: #565656;
+					text-transform: uppercase;
+					padding: 10px 0 4px;
+					font-family: 'nli';
+				}
+				p {
+					font-size: 1.6em;
+					padding: 25px 0;
+					text-indent: 10px;
+					line-height: 1.2;
+					color: #888;
+				}
+			}
+		}
+	}
+	.shortInfo_container:nth-child(1) {
+		.shortInfo_container-SVGImage {
+			.tree_path {
+				fill: none;
+				stroke-miterlimit:10;
+			}
+			.tree_path-trunk {
+				stroke: rgb(247,0,33);
+			}
+			.tree_path-bagel,.tree_path-crown {
+				stroke: rgb(80,135,175);
+				stroke-width:2px;
+			}
+		}
+		.shortInfo_container-title {
+
+			.shortInfo_container-title_container {
+
+				h3 {
+					color: #f70021;
+				}
+				h4 {
+					color: #5087af;
+				}
+				p {
+				}
+			}
+		}
+	}
+	.shortInfo_container:nth-child(2) {
+		background: rgb(255,165,0);
+		.shortInfo_container-SVGImage {
+			.pay_path{fill:none;stroke-miterlimit:10;}
+			.pay_path-card,.pay_path-signa,.pay_path-magnet,.pay_path-text{
+				stroke: black;
+			}
+			.pay_path-text {
+				stroke-width:20px;
+			}
+			.pay_path-card,.pay_path-signa{stroke-width:2px;}
+			.pay_path-logo{
+				stroke-width:20px;
+				stroke: #fe8735;
+			}
+			.pay_path-magnet{stroke-width:60px;}
+			.pay_path-armor{
+				stroke-width:40px;
+				stroke: #d75c32;
+			}
+		}
+		.shortInfo_container-title {
+
+			.shortInfo_container-title_container {
+
+				h3 {
+					color: #000;
+				}
+				h4 {
+					color: #f44327;
+				}
+				p {
+					color: black;
+					a {
+						color:#fff;
+					}
+				}
+			}
+		}
+	}
 }
-// @keyframes dash {
-// 	to {
-// 		stroke-dashoffset:0;
-// 	}
-// }
+.shortInfo_container-SVGImage-fan{
+	height: 700px;
+	position: relative;
+}
+.fan-title {
+	position: absolute;
+	color: #fff;
+	font-size: 2.2em;
+	font-family: 'museocyrl';
+	right: 0;
+	margin: auto;
+	margin-top: 200px;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.fan {
+	width:0px;
+	height:0px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+
+}
+.center {
+	background: url(../images/centerLopast.svg)no-repeat center center;
+	width: 121px;
+	height: 121px;margin: -60px -60px;
+	position: relative;
+	animation: rotate 1.2s linear infinite;
+}
+.blade1 {
+	background: url(../images/Lopast.svg) no-repeat center center;
+	width: 119px;
+	height: 195px;
+	position: absolute;
+	z-index: -1;
+	top: 115;
+	-webkit-transform: rotate(180deg);
+	transform: rorate(180deg);
+}
+.blade2 {
+	background: url(../images/Lopast.svg) no-repeat center center;
+	width: 119px;
+	height: 195px;
+	position: absolute;
+	z-index: -1;
+	top: -189;
+}
+
+@keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
