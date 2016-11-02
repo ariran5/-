@@ -158,12 +158,12 @@ class jobWithSvg {
 }
 var initSVG;
 setTimeout(function() {
-	var initSVG = new jobWithSvg();
+	initSVG = new jobWithSvg();
 	window.onscroll = function() {
-	var scrollValue = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
-	initSVG.howSvgActive(scrollValue);
-}
-},10);
+		var scrollValue = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
+		initSVG.howSvgActive(scrollValue);
+	}
+},110);
 
 
 
