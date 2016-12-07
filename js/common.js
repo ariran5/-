@@ -138,7 +138,7 @@ class jobWithSvg {
 	}
 
 	__calculate(scrollValue,svgName) {
-		if (scrollValue > this.allAnimSVG[svgName].startAnim && scrollValue < this.allAnimSVG[svgName].endAnim) {
+		if (scrollValue >= this.allAnimSVG[svgName].startAnim && scrollValue < this.allAnimSVG[svgName].endAnim) {
 			for (var i = 0; i < this.allAnimSVG[svgName].allPathInSVGNames.length; i++) {
 				var a = this.allAnimSVG[svgName].allPathInSVG[this.allAnimSVG[svgName].allPathInSVGNames[i]];
 				a.basePath.style.strokeDashoffset = a.pathLength - (scrollValue - this.allAnimSVG[svgName].startAnim) * a.multiple;
@@ -162,6 +162,7 @@ setTimeout(function() {
 	window.onscroll = function() {
 		var scrollValue = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
 		initSVG.howSvgActive(scrollValue);
+		console.log(scrollValue);
 	}
 },110);
 
